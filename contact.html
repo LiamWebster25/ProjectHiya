@@ -21,15 +21,36 @@
     <div class="bg-container">
       <div class="container">
         <h2>Contact Us!</h2>
-  <form class="contact-form" action="your-server-side-script" method="POST">
+  <form onsubmit="contact()" class="contact-form" action="your-server-side-script" method="POST">
+    
     <input type="text" name="name" placeholder="Name">
+    
     <input type="email" name="email" placeholder="Email">
+    
     <textarea name="message" placeholder="Message"></textarea>
     <br>
     <button type="submit">Send</button>
   </form>
   <p>OR email us at <a href="mailto:1234@hiya.com">1234@hiya.com</a></p>
-      </div>
+      
     </div>
+  </div>
+
+    <script>
+
+      function contact(){
+        
+        //This just grabs all the values of the 
+        var nameOfClient = document.getElementById("name").value; 
+        var emailAddy = document.getElementById("email").value; 
+        var messageToSend = document.getElementById("message").value; 
+
+        
+
+      }
+
+    </script> 
+
+
   </body>
 </html>
