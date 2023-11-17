@@ -60,14 +60,15 @@ body .bg-container {
 /* Additional styles for .container */
 .bg-container .container {
     width: 90%; /* Width of the container, adjust as needed */
-     min-height: 450px;
-    background-color: rgb(255, 255, 255); /* Adjust the alpha value to between 0 and 1 */
-    margin: 0 auto; /* This will center the container horizontally */
+    min-height: 450px; /* Minimum height of the container */
+    background-color: rgb(255, 255, 255); /* White background color */
+    margin: 40px auto; /* Top margin and horizontally centering */
     display: flex;
-    justify-content: center; /* Center content horizontally in the flex container */
-    flex-direction: column;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: column; /* Stack children vertically */
     border-radius: 15px;
-    margin-top: 40px;
+    padding: 20px; /* Add some padding */
 }
 
 table {
@@ -86,6 +87,47 @@ table {
 
  #Info {
     font-size: 30px;
-    padding: 20px;
+    padding-left: 20px;
     font-weight: bold;
+  }
+
+
+  ul li {
+    padding: 5px;
+  }
+
+  .contact-form {
+    margin-top: 20px;
+  }
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+  }
+
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    height: 400px;
+  }
+
+  .contact-form button {
+    padding: 10px 20px;
+    border: 1px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  .contact-form button:hover {
+    background-color: #f2f2f2;
   }
