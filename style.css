@@ -1,0 +1,71 @@
+/* Place your CSS styles in a style.css file and link it in the head of your HTML document */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    background: linear-gradient(to top, rgba(66,6,22,1), rgba(223,3,41,1));
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header img {
+    height: 15vh;
+    margin: 0;
+}
+
+nav p {
+    font-size: 38px;
+    line-height: 50px;
+    text-align: right;
+    margin-right: 60px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    font-size: larger;
+}
+
+/* If you want the nav to be at the very right */
+nav {
+    margin-left: auto;
+}
+
+body {
+    background: linear-gradient(to right, rgba(73,73,73,255), rgba(138,138,138,255), rgba(138,138,138,255), rgba(73,73,73,255));
+}
+
+body .bg-container {
+    height: 100vh;
+    width: 75%; /* Width of the container, adjust as needed */
+    background-color: rgba(33,33,33,1); /* Adjust the alpha value to between 0 and 1 */
+    margin: 0 auto; /* This will center the container horizontally */
+    display: flex;
+    justify-content: center; /* Center content horizontally in the flex container */
+}
+
+/* Additional styles for .container */
+.bg-container .container {
+    width: 90%; /* Width of the container, adjust as needed */
+    height: 450px;
+    background-color: rgb(255, 255, 255); /* Adjust the alpha value to between 0 and 1 */
+    margin: 0 auto; /* This will center the container horizontally */
+    display: flex;
+    justify-content: center; /* Center content horizontally in the flex container */
+    align-items: center; /* Center content vertically in the flex container */
+    border-radius: 15px;
+    margin-top: 40px;
+}
