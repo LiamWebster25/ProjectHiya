@@ -20,8 +20,51 @@
   <body>
     <div class="bg-container">
       <div class="container">
-        <p>Prices</p>
+        <h1>Membership Calculator</h1>
+
+          <label for="months">Number of Months:</label>
+          <input type="number" id="months" min="1" value="1">
+
+          <label for="program">Choose a Program:</label>
+          <select id="program">
+            <option value="3classes">3 Classes/Week - $100</option>
+            <option value="5classes">5 Classes/Week - $150</option>
+            <option value="unlimited">Unlimited Classes - $200</option>
+          </select>
+
+      <button onclick="calculateTotal()">Calculate Total</button>
+
+      <label for="total">Total Amount:</label>
+      <input type="text" id="total" readonly>
+
+      <footer>
+        <p>&copy; Hiya! 2023 </p>
+        <p><a href="admin.html">Admin</a></p>
+      </footer>
       </div>
     </div>
+    
+    
+
+  <script>
+    function calculateTotal() {
+      // Get values from input fields
+      const months = parseInt(document.getElementById('months').value);
+      const program = document.getElementById('program').value;
+
+      // Define program costs
+      const programCosts = {
+        '3classes': 100,
+        '5classes': 150,
+        'unlimited': 200
+      };
+
+      // Calculate total amount
+      const totalAmount = months * programCosts[program];
+
+      // Display the result in the total input field
+      document.getElementById('total').value = `$${totalAmount}`;
+    }
+  </script>
   </body>
 </html>

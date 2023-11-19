@@ -1,4 +1,3 @@
-/* Place your CSS styles in a style.css file and link it in the head of your HTML document */
 
 html, body {
     margin: 0;
@@ -33,20 +32,21 @@ nav p {
 nav a {
     text-decoration: none;
     color: white;
+    transition-duration: 0.5s;
 }
 
 nav a:hover {
     font-size: larger;
 }
 
-/* If you want the nav to be at the very right */
 nav {
     margin-left: auto;
 }
 
 body {
     background: linear-gradient(to right, rgba(73,73,73,255), rgba(138,138,138,255), rgba(138,138,138,255), rgba(73,73,73,255));
-}
+
+  }
 
 body .bg-container {
     height: 100vh;
@@ -56,6 +56,61 @@ body .bg-container {
     display: flex;
     justify-content: center; /* Center content horizontally in the flex container */
 }
+
+#login-container {
+  width: 90%;
+  min-height: 450px;
+  background-color: rgb(255, 255, 255);
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 20px;
+  z-index: 2; /* Ensure login is in front */
+  position: relative; /* Enable z-index */
+}
+
+.message {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+
+
+
+  
+body .bg-home-container{
+
+  height: 100vh;
+  width: 85%; /* Width of the container, adjust as needed */
+  background-color: rgba(33,33,33,1); /* Adjust the alpha value to between 0 and 1 */
+  margin: 0 auto; /* This will center the container horizontally */
+  display: flex;
+  justify-content: center; /* Center content horizontally in the flex container */
+
+}
+
+body .home-container{
+
+  width: 90%; /* Width of the container, adjust as needed */
+    min-height: 450px; /* Minimum height of the container */
+    background-color: rgb(255, 255, 255); /* White background color */
+    margin: 40px auto; /* Top margin and horizontally centering */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: column; /* Stack children vertically */
+    border-radius: 15px;
+    padding: 20px; /* Add some padding */
+  
+}
+
+
 
 /* Additional styles for .container */
 .bg-container .container {

@@ -21,35 +21,36 @@
     <div class="bg-container">
       <div class="container">
         <h2>Contact Us!</h2>
-  <form onsubmit="contact()" class="contact-form" action="your-server-side-script" method="POST">
-    
-    <input type="text" name="name" placeholder="Name">
-    
-    <input type="email" name="email" placeholder="Email">
-    
-    <textarea name="message" placeholder="Message"></textarea>
-    <br>
-    <button type="submit">Send</button>
-  </form>
-  <p>OR email us at <a href="mailto:1234@hiya.com">1234@hiya.com</a></p>
-      
+        <form onsubmit="contact(event)" class="contact-form" method="POST">
+          <input type="text" name="name" placeholder="Name">
+          <input type="email" name="email" placeholder="Email">
+          <textarea name="message" placeholder="Message"></textarea>
+          <br>
+          <button type="submit">Send</button>
+        </form>
+        <p>OR email us at <a href="mailto:1234@hiya.com">1234@hiya.com</a></p>
+      </div>
     </div>
-  </div>
-
+  
     <script>
+      function contact(event) {
+        event.preventDefault();
 
-      function contact(){
-        
-        //This just grabs all the values of the 
-        var nameOfClient = document.getElementById("name").value; 
-        var emailAddy = document.getElementById("email").value; 
-        var messageToSend = document.getElementById("message").value; 
+        var nameOfClient = document.getElementsByName("name")[0].value;
+        var emailAddy = document.getElementsByName("email")[0].value;
+        var messageToSend = document.getElementsByName("message")[0].value;
 
-        
+        alert("Your message has been submitted!");
 
-      }
+        // Update admin page using localStorage
+        var messages = JSON.parse(localStorage.getItem('messages')) || [];
+        messages.push({ name: nameOfClient, email: emailAddy, message: messageToSend });
+        localStorage.setItem('messages', JSON.stringify(messages));
 
-    </script> 
+        // Call the displayMessage function directly to update admin page immediately
+        displayMessage({ name: nameOfClient, email: emailAddy, message: messageToSend });
+    }
+  </script>
 
 
   </body>
