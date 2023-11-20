@@ -200,7 +200,15 @@ th {
   background-color: #f2f2f2;
 }
 
-
+#priceBox{
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-direction: column; /* Stack children vertically */
+  border: 2px solid;
+  padding: 20px;
+  border-radius: 15px;
+}
 
 
 /* Contact Info Page */ 
@@ -249,4 +257,13 @@ th {
 }
 .contact-form button:hover {
   background-color: #f2f2f2;
+}
+
+
+/*-----------------------------------------------------------------------------------
+Footer*/
+
+footer {
+display: flex;
+justify-content: center;
 }

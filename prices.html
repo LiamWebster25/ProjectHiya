@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
     <!-- Font imports -->
-    <link href="https://fonts.cdnfonts.com/css/karate-personal-use" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/karate" rel="stylesheet">
+    <link
+      href="https://fonts.cdnfonts.com/css/karate-personal-use"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/karate" rel="stylesheet" />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,53 +25,74 @@
     </nav>
   </header>
   <body>
+    
     <div class="bg-container">
       <div class="container">
+        <div id=priceBox>
+
+        
         <h1>Membership Calculator</h1>
 
-          <label for="months">Number of Months:</label>
-          <input type="number" id="months" min="1" value="1">
+        <label for="months">Number of Months:</label>
+        <input type="number" id="months" min="1" value="1" />
+        <br/>
 
-          <label for="program">Choose a Program:</label>
-          <select id="program">
-            <option value="3classes">3 Classes/Week - $100</option>
-            <option value="5classes">5 Classes/Week - $150</option>
-            <option value="unlimited">Unlimited Classes - $200</option>
-          </select>
+        <label for="location">Choose a Location:</label>
+        <select id="location">
+          <option value="123mainRoad">123 Mainroad</option>
+          <option value="456secondAvenue">456 Second Avenue</option>
+          <option value="789smithblvd">789 Smith Boulevard</option>
+        </select>
+        <br>
 
-      <button onclick="calculateTotal()">Calculate Total</button>
+        <label for="program">Choose a Program:</label>
+        <select id="program">
+          <option value="3classes">3 Classes/Week - $100</option>
+          <option value="5classes">5 Classes/Week - $150</option>
+          <option value="unlimited">Unlimited Classes - $200</option>
+        </select>
+        <br />
 
-      <label for="total">Total Amount:</label>
-      <input type="text" id="total" readonly>
+        <button onclick="calculateTotal()">Calculate Total</button>
+        <br />
 
-      <footer>
-        <p>&copy; Hiya! 2023 </p>
-        <p><a href="admin.html">Admin</a></p>
-      </footer>
+        <label for="total">Total Amount:</label>
+        <input type="text" id="total" readonly />
+        <br>
+
+        <label for="totalTax">Total Amount w/taxes:</label>
+        <input type="text" id="totalTax" readonly />
+      </div>
       </div>
     </div>
-    
-    
+    <footer>
+      <p>&copy; Hiya! 2023</p>
+      <p><a href="admin.html">Admin</a></p>
+    </footer>
 
-  <script>
-    function calculateTotal() {
-      // Get values from input fields
-      const months = parseInt(document.getElementById('months').value);
-      const program = document.getElementById('program').value;
+    <script>
+      function calculateTotal() {
+        // Get values from input fields
+        const months = parseInt(document.getElementById("months").value);
+        const program = document.getElementById("program").value;
 
-      // Define program costs
-      const programCosts = {
-        '3classes': 100,
-        '5classes': 150,
-        'unlimited': 200
-      };
+        // Define program costs
+        const programCosts = {
+          "3classes": 100,
+          "5classes": 150,
+          unlimited: 200,
+        };
 
-      // Calculate total amount
-      const totalAmount = months * programCosts[program];
+        // Calculate total amount
+        const totalAmount = months * programCosts[program];
 
-      // Display the result in the total input field
-      document.getElementById('total').value = `$${totalAmount}`;
-    }
-  </script>
+        // Display the result in the total input field
+        document.getElementById("total").value = `$${totalAmount}`;
+        
+        const totalTax = (totalAmount * 1.15).toFixed(2);
+        document.getElementById("totalTax").value = `$${totalTax}`;
+
+      }
+    </script>
   </body>
 </html>
