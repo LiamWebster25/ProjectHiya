@@ -57,6 +57,13 @@ body .bg-container {
     justify-content: center; /* Center content horizontally in the flex container */
 }
 
+video{
+
+  height: 500px; 
+  width: 1000px;
+
+}
+
 #login-container {
   width: 90%;
   min-height: 450px;
