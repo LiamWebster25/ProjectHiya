@@ -5,6 +5,16 @@ html, body {
     overflow-x: hidden;
 }
 
+body {
+    
+  background: linear-gradient(to right, rgba(73,73,73,255), rgba(138,138,138,255), rgba(138,138,138,255), rgba(73,73,73,255));
+  
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+
+/*Nav bar formatting */ 
 header {
     width: 100%;
     background: linear-gradient(to top, rgba(66,6,22,1), rgba(223,3,41,1));
@@ -43,25 +53,84 @@ nav {
     margin-left: auto;
 }
 
-body {
-    background: linear-gradient(to right, rgba(73,73,73,255), rgba(138,138,138,255), rgba(138,138,138,255), rgba(73,73,73,255));
+/*----------------------------------------------------------------------------------------*/
 
-  }
 
-body .bg-container {
-    height: 100vh;
-    width: 85%; /* Width of the container, adjust as needed */
-    background-color: rgba(33,33,33,1); /* Adjust the alpha value to between 0 and 1 */
-    margin: 0 auto; /* This will center the container horizontally */
-    display: flex;
-    justify-content: center; /* Center content horizontally in the flex container */
+/*HOME PAGE ATTEMPT AT FORMATTING NICELY */ 
+
+.home-container1 {
+  width: 90%;
+  min-height: 450px;
+  background-color: rgb(255, 255, 255);
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  border-radius: 15px;
+  padding: 20px;
 }
 
-video{
+.home-container1 h1{
+  font-size: xx-large;
+}
 
-  height: 500px; 
-  width: 1000px;
+.text-and-video {
+  display: flex;
+  justify-content: space-between; /* Distributes children with space between */
+  align-items: center;
+}
 
+.paragraph1 {
+  flex: 3; /* Adjust the flex ratio to give more space to the paragraph */
+  padding-right: 20px; /* Add padding to separate text from the video */
+}
+
+.video1 {
+  flex: 2; /* Adjust the flex ratio to control the video size */
+  padding-left: 20px; /* Add padding to separate video from the text */
+}
+
+.video1 video {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.paragraph2 {
+  width: 100%; /* Full width under the text and video */
+  padding-top: 20px; /* Add space above the second paragraph */
+}
+
+.home-container1 h1 {
+  color: #333;
+}
+
+.home-container1 p {
+  line-height: 1.5;
+  color: #666;
+  font-size: xx-large;
+}
+
+
+/*----------------------------------------------------------------------------------------*/
+
+/* Messages from the admin page */ 
+.message {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+
+/*Containers accross various pages */ 
+
+body.bg-container {
+  height: 100vh;
+  width: 85%; /* Width of the container, adjust as needed */
+  background-color: rgba(33,33,33,1); /* Adjust the alpha value to between 0 and 1 */
+  margin: 0 auto; /* This will center the container horizontally */
+  display: flex;
+  justify-content: center; /* Center content horizontally in the flex container */
 }
 
 #login-container {
@@ -79,117 +148,99 @@ video{
   position: relative; /* Enable z-index */
 }
 
-.message {
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px 0;
-}
-
-
-
-
-  
-body .bg-home-container{
-
-  height: 100vh;
-  width: 85%; /* Width of the container, adjust as needed */
-  background-color: rgba(33,33,33,1); /* Adjust the alpha value to between 0 and 1 */
-  margin: 0 auto; /* This will center the container horizontally */
-  display: flex;
-  justify-content: center; /* Center content horizontally in the flex container */
-
-}
-
-body .home-container{
+.bg-container .home-container{
 
   width: 90%; /* Width of the container, adjust as needed */
-    min-height: 450px; /* Minimum height of the container */
-    background-color: rgb(255, 255, 255); /* White background color */
-    margin: 40px auto; /* Top margin and horizontally centering */
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    flex-direction: column; /* Stack children vertically */
-    border-radius: 15px;
-    padding: 20px; /* Add some padding */
+  min-height: 450px; /* Minimum height of the container */
+  background-color: rgb(255, 255, 255); /* White background color */
+  margin: 40px auto; /* Top margin and horizontally centering */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-direction: column; /* Stack children vertically */
+  border-radius: 15px;
+  padding: 20px; /* Add some padding */
   
 }
 
-
-
-/* Additional styles for .container */
 .bg-container .container {
-    width: 90%; /* Width of the container, adjust as needed */
-    min-height: 450px; /* Minimum height of the container */
-    background-color: rgb(255, 255, 255); /* White background color */
-    margin: 40px auto; /* Top margin and horizontally centering */
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    flex-direction: column; /* Stack children vertically */
-    border-radius: 15px;
-    padding: 20px; /* Add some padding */
+  width: 90%; /* Width of the container, adjust as needed */
+  min-height: 450px; /* Minimum height of the container */
+  background-color: rgb(255, 255, 255); /* White background color */
+  margin: 40px auto; /* Top margin and horizontally centering */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-direction: column; /* Stack children vertically */
+  border-radius: 15px;
+  padding: 20px; /* Add some padding */
 }
 
+
+/*Schedule Page */ 
 table {
-    width: 97%;
-    border-collapse: collapse;
-    margin: 20px;
-  }
-  th, td {
-    border: 2px solid black;
-    text-align: center;
-    padding: 8px;
-  }
-  th {
-    background-color: #f2f2f2;
-  }
+  width: 97%;
+  border-collapse: collapse;
+  margin: 20px;
+}
 
- #Info {
-    font-size: 30px;
-    padding-left: 20px;
-    font-weight: bold;
-  }
+th, td{
+  border: 2px solid black;
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
 
 
-  ul li {
-    padding: 5px;
-  }
 
-  .contact-form {
-    margin-top: 20px;
-  }
-  .contact-form input[type="text"],
-  .contact-form input[type="email"],
-  .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #000;
-    box-sizing: border-box;
-    text-align: center;
-    align-items: center;
-  }
 
-  .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #000;
-    box-sizing: border-box;
-    text-align: center;
-    align-items: center;
-    height: 400px;
-  }
+/* Contact Info Page */ 
+#Info {
+  font-size: 30px;
+  padding-left: 20px;
+  font-weight: bold;
+}
 
-  .contact-form button {
-    padding: 10px 20px;
-    border: 1px solid #000;
-    background-color: #fff;
-    cursor: pointer;
-  }
-  .contact-form button:hover {
-    background-color: #f2f2f2;
-  }
+  ul li{
+  padding: 5px;
+}
+
+.contact-form {
+  margin-top: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+}
+
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+  height: 400px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  background-color: #fff;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background-color: #f2f2f2;
+}
