@@ -8,7 +8,9 @@ html, body {
 body {
     
   background: linear-gradient(to right, rgba(73,73,73,255), rgba(138,138,138,255), rgba(138,138,138,255), rgba(73,73,73,255));
-  
+  font-family: 'Karate', sans-serif;
+
+
 }
 
 /*----------------------------------------------------------------------------------------*/
@@ -16,6 +18,7 @@ body {
 
 /*Nav bar formatting */ 
 header {
+    
     width: 100%;
     background: linear-gradient(to top, rgba(66,6,22,1), rgba(223,3,41,1));
     height: 15vh;
@@ -23,6 +26,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+
 }
 
 header img {
@@ -43,6 +47,8 @@ nav a {
     text-decoration: none;
     color: white;
     transition-duration: 0.5s;
+    font-family: 'Karate Personal Use', sans-serif;
+
 }
 
 nav a:hover {
