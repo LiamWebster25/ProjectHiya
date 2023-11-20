@@ -267,3 +267,24 @@ footer {
 display: flex;
 justify-content: center;
 }
+
+/*------------------------------------------------------------------------------------*/
+/*Media Tags*/ 
+
+@media only screen and (max-width: 1200px) {
+  body {
+    font-size: 90%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 75%;
+  }
+}
