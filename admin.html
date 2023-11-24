@@ -1,0 +1,125 @@
+<!-- -------------------------------------------------------  
+Final Project  Written by: (Liam Webster - 2265137 and Rowan Lajoie - )  
+*“Rowan: Entire page” 
+For “Internet Programming” Section (00001)– Fall 2023 
+--------------------------------------------------------  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--Font Imports-->
+    <link href="https://fonts.cdnfonts.com/css/karate-personal-use" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/karate" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<body>
+
+    <header>
+        <a href="home.html"><img src="logo.png" alt="Home" /></a>
+        <nav>
+          <p>
+            <a href="home.html">Home</a>&nbsp; <a href="about.html">About</a>&nbsp;
+            <a href="schedule.html">Schedule</a> &nbsp;
+            <a href="prices.html">Prices</a> &nbsp;
+            <a href="contact.html">Contact</a>
+          </p>
+        </nav>
+      </header>
+    
+
+      <div id="bg-container">
+        <div id="login-container">
+            <h2>Login</h2>
+            <form onsubmit="login(event)">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    
+        <div id="messagesContainer"></div>
+     </div>
+        
+
+        <script>
+            function login(event) {
+                //Prevents blank page 
+                event.preventDefault();
+                
+                //ensures that the hidden info goes unseen until after successfull log in 
+                document.getElementById("messagesContainer").style.display = "none";
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+
+        // Check if the username and password are correct
+        if (username === "admin" && password === "password") {
+            // If login is successful it shows the messages container and hides the login container
+            document.getElementById("login-container").style.display = "none";
+            document.getElementById("messagesContainer").style.display = "block";
+
+            // Updates the messages
+            updateAdminPageFromStorage();
+
+            //Clears the login form
+            document.getElementById("username").value = "";
+            document.getElementById("password").value = "";
+        //If the wrong info is entered it sends an alert 
+        } else {
+            alert("Invalid credentials. Please try again.");
+        }
+    }
+
+        //Diplays message and creates a new object every time a new message comes in 
+            function displayMessage(message) {
+                var messagesContainer = document.getElementById("messagesContainer");
+                var messageElement = document.createElement("div");
+                messageElement.className = "message";
+    
+                var nameElement = document.createElement("p");
+                nameElement.textContent = "Name: " + message.name;
+    
+                var emailElement = document.createElement("p");
+                emailElement.textContent = "Email: " + message.email;
+    
+                var messageContentElement = document.createElement("p");
+                messageContentElement.textContent = "Message: " + message.message;
+    
+                messageElement.appendChild(nameElement);
+                messageElement.appendChild(emailElement);
+                messageElement.appendChild(messageContentElement);
+    
+                messagesContainer.appendChild(messageElement);
+            }
+    
+            //Extracts the messages from the localStorage concept by parsing the JSON into a string array (or var array)
+            function updateAdminPageFromStorage() {
+                var messagesContainer = document.getElementById("messagesContainer");
+                messagesContainer.innerHTML = ''; // Clear existing content
+    
+                var messages = JSON.parse(localStorage.getItem('messages')) || [];
+    
+                messages.forEach(function (message) {
+                    displayMessage(message);
+                });
+            }
+                
+            //Listens for changes in localStorage and update accordingly
+            window.addEventListener('storage', function (event) {
+                if (event.key === 'messages') {
+                    updateAdminPageFromStorage();
+                }
+            });
+        </script>
+    
+</body>
+</html>

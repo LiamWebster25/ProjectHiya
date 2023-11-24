@@ -1,0 +1,326 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    
+  background: linear-gradient(to right, rgba(73,73,73,255), rgba(138,138,138,255), rgba(138,138,138,255), rgba(73,73,73,255));
+  font-family: 'Karate', sans-serif;
+
+
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+
+/*Nav bar formatting */ 
+header {
+    
+    width: 100%;
+    background: linear-gradient(to top, rgba(66,6,22,1), rgba(223,3,41,1));
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5 20px;
+
+}
+
+header img {
+    max-height: 15vh;
+    width: auto;
+    margin: 0;
+}
+
+nav p {
+    font-size: 38px;
+    line-height: 50px;
+    text-align: right;
+    margin-right: 60px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition-duration: 0.5s;
+    font-family: 'Karate Personal Use', sans-serif;
+
+}
+
+nav a:hover {
+    font-size: larger;
+    color: yellow; 
+}
+
+nav {
+    margin-left: auto;
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+
+/*HOME PAGE ATTEMPT AT FORMATTING NICELY */ 
+
+.home-container1 {
+  width: 90%;
+  min-height: 450px;
+  background-color: rgb(255, 255, 255);
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.home-container1 h1{
+  font-size: xx-large;
+}
+
+.text-and-video {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.paragraph1 {
+  flex: 3; 
+  padding-right: 20px; 
+}
+
+.video1 {
+  flex: 2; 
+  padding-left: 20px; 
+}
+
+.video1 video {
+  width: 100%;
+  height: auto; 
+}
+
+.paragraph2 {
+  width: 100%;
+  padding-top: 20px; 
+}
+
+.home-container1 h1 {
+  color: #333;
+}
+
+.home-container1 p {
+  line-height: 1.5;
+  color: #666;
+  font-size: xx-large;
+}
+
+
+/*----------------------------------------------------------------------------------------*/
+
+/* Messages from the admin page */ 
+.message {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+
+/*Containers accross various pages */ 
+
+body.bg-container {
+  height: 100vh;
+  width: 85%; 
+  background-color: rgba(33,33,33,1); 
+  margin: 0 auto; 
+  display: flex;
+  justify-content: center; 
+}
+
+#login-container {
+  width: 90%;
+  min-height: 450px;
+  background-color: rgb(255, 255, 255);
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 20px;
+  z-index: 2; 
+  position: relative; 
+}
+
+.bg-container .home-container{
+
+  width: 90%; 
+  min-height: 450px; 
+  background-color: rgb(255, 255, 255); 
+  margin: 40px auto; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
+  border-radius: 15px;
+  padding: 20px; 
+  
+}
+
+.bg-container .container {
+  width: 90%; 
+  min-height: 450px;
+  background-color: rgb(255, 255, 255); 
+  margin: 40px auto; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
+  border-radius: 15px;
+  padding: 20px; 
+}
+
+
+/*Schedule Page */ 
+table {
+  width: 97%;
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+th, td{
+  border: 2px solid black;
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+#priceBox{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
+  border: 2px solid;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+
+/* Contact Info Page */ 
+#Info {
+  font-size: 30px;
+  padding-left: 20px;
+  font-weight: bold;
+}
+
+  ul li{
+  padding: 5px;
+}
+
+.contact-form {
+  margin-top: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+}
+
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+  height: 400px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  background-color: #fff;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background-color: #f2f2f2;
+}
+
+
+/*-----------------------------------------------------------------------------------
+Footer*/
+
+footer {
+display: flex;
+justify-content: center;
+}
+
+/*------------------------------------------------------------------------------------*/
+/*Media Tags*/ 
+
+
+@media only screen and (max-width: 768px) {
+  
+  header img{
+    width: 100%;
+  }
+  
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    height: auto;
+    
+  }
+
+  nav {
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  nav a {
+    width: 100%; 
+    text-align: center; 
+    font-size: medium; 
+  }
+
+  nav a:hover{
+
+    font-size: large;
+    color: yellow; 
+  }
+
+  .text-and-video {
+    flex-direction: column; 
+  }
+
+  .paragraph1, .video1 {
+    width: 100%; 
+    padding: 0; 
+    box-sizing: border-box;
+  }
+
+  .video1 video {
+    width: 100%; 
+    height: auto; 
+  }
+  
+}
