@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
-    <!-- Font imports -->
-    <link href="https://fonts.cdnfonts.com/css/karate-personal-use" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/karate" rel="stylesheet">
-
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weekly Schedule</title>
@@ -140,5 +134,43 @@
     <footer>
       <p>&copy; Hiya! 2023 - <a href="admin.html">Admin</a></p>
     </footer>
+
+<script>
+  function fonts() {
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "fonts.json", true);
+  xhr.onload = function () {
+    if (xhr.status >= 200 && xhr.status < 400) {
+      var data = JSON.parse(xhr.responseText);
+
+      // Extract font URLs from the JSON data
+      var font1 = data[0].font1;
+      var font2 = data[0].font2;
+
+      // Create link elements for the fonts
+      var link1 = document.createElement("link");
+      var link2 = document.createElement("link");
+
+      link1.rel = "stylesheet";
+      link1.href = font1;
+
+      link2.rel = "stylesheet";
+      link2.href = font2;
+
+      // Append the link elements to the head
+      var head = document.getElementsByTagName("head")[0];
+      head.appendChild(link1);
+      head.appendChild(link2);
+    }
+  };
+
+  xhr.send();
+}
+
+window.onload = function () {
+    fonts();
+}
+</script>
+
   </body>
 </html>
