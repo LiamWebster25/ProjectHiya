@@ -7,20 +7,19 @@ SUMMARY:
 In this project deliverable, myself and Liam have decided to go for a safe and simplistic approach to web design by having simple, catchy
 and smooth feel to the whole thing. 
 
+In the footer of every page is access to the admin page where you can see messages sent by the contact page. 
+
 HOME: 
 
-For our home page, we went for a simple design where the first thing that catches your eye is the mattress against the wall video that you 
-most likely felt inclined to click on as soon as you opened the page. This is exactly the intention of it as the video is designed to get 
-the user more interested in what this gym has to offer. 
+We have nothing very complex on this page. Just click on the video and enjoy the UI. 
 
 ABOUT:
 
-We've decided to keep the same design for the about tab in order to not disrupt the user's experience. Simplicity is key for web design. 
-We also have included an image to keep the user engaged. 
+Access to the admin page via footer. 
 
 PRICE: 
 
-Here we calculate the exact price with and without tax that a member must pay to keep access to the gym. 
+Here we calculate the exact price with and without tax that a member must pay to keep access to the gym. You MUST place a month about in the numericUpDown
 
 SCHEDULE: 
 
@@ -29,9 +28,17 @@ We used a table for this page in order to provide a sleek schedule that the user
 
 CONTACT: 
 
-If you wish to contact the gym owner, the contact page sends messages directly to the admin.html file that can be seen by clicking "Admin"
+
+You must fill out all of the forms in order to send the message and the email must contain an @ symbol
+
+
+The contact page sends messages directly to the admin.html file that can be seen by clicking "Admin"
 in the footer and logging in using the credentials: 
 
+
+Admin:
+
+Credentials
 Username: admin
 Password: password 
 

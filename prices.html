@@ -1,6 +1,6 @@
 <!-- -------------------------------------------------------  
 Final Project  Written by: (Liam Webster - 2265137 and Rowan Lajoie - 2179433)  
-*“Liam: Entire Page” 
+*“Rowan: HTML, CSS, JS Liam: JS & Ajax” 
 For “Internet Programming” Section (00001)– Fall 2023 
 --------------------------------------------------------  -->
 <!DOCTYPE html>
@@ -68,32 +68,34 @@ For “Internet Programming” Section (00001)– Fall 2023
     </footer>
 
     <script>
-      function fonts() {
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "fonts.json", true);
-  xhr.onload = function () {
-    if (xhr.status >= 200 && xhr.status < 400) {
-      var data = JSON.parse(xhr.responseText);
+      
+    function fonts() {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "fonts.json", true);
+      xhr.onload = function () {
+      
+      if (xhr.status >= 200 && xhr.status < 400) {
+        var data = JSON.parse(xhr.responseText);
 
-      // Extract font URLs from the JSON data
-      var font1 = data[0].font1;
-      var font2 = data[0].font2;
+        // Extract font URLs from the JSON data
+        var font1 = data[0].font1;
+        var font2 = data[0].font2;
 
-      // Create link elements for the fonts
-      var link1 = document.createElement("link");
-      var link2 = document.createElement("link");
+        // Create link elements for the fonts
+        var link1 = document.createElement("link");
+        var link2 = document.createElement("link");
 
-      link1.rel = "stylesheet";
-      link1.href = font1;
+        link1.rel = "stylesheet";
+        link1.href = font1;
 
-      link2.rel = "stylesheet";
-      link2.href = font2;
+        link2.rel = "stylesheet";
+        link2.href = font2;
 
-      // Append the link elements to the head
-      var head = document.getElementsByTagName("head")[0];
-      head.appendChild(link1);
-      head.appendChild(link2);
-    }
+        // Append the link elements to the head
+        var head = document.getElementsByTagName("head")[0];
+        head.appendChild(link1);
+        head.appendChild(link2);
+      }
   };
 
   xhr.send();
@@ -102,23 +104,24 @@ For “Internet Programming” Section (00001)– Fall 2023
 window.onload = function () {
     fonts();
 }
-      function calculateTotal() {
-        
-        // Get values from input fields
-        const months = parseInt(document.getElementById("months").value);
-        const program = document.getElementById("program").value;
 
-        if (!months) {
-          alert("Months cannot be left empty.");
-          return;
-        }
+function calculateTotal() {
+        
+  // Get values from input fields
+  const months = parseInt(document.getElementById("months").value);
+  const program = document.getElementById("program").value;
+
+    if (!months) {
+      alert("Months cannot be left empty.");
+        return;
+    }
 
         // Define program costs
-        const programCosts = {
-          "3classes": 100,
-          "5classes": 150,
-          unlimited: 200,
-        };
+      const programCosts = {
+        "3classes": 100,
+        "5classes": 150,
+        unlimited: 200,
+      };
 
         // Calculate total amount
         const totalAmount = months * programCosts[program];
@@ -126,7 +129,9 @@ window.onload = function () {
         // Display the result in the total input field
         document.getElementById("total").value = `$${totalAmount}`;
         
+         
         const totalTax = (totalAmount * 1.15).toFixed(2);
+        //Display result                           //Dollar sign, and then having the variable present itself
         document.getElementById("totalTax").value = `$${totalTax}`;
 
       }

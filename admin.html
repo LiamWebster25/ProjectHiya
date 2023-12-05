@@ -110,23 +110,31 @@ window.onload = function () {
 
       //Diplays message and creates a new object every time a new message comes in
       function displayMessage(message) {
+        
+        //Getting 
         var messagesContainer = document.getElementById("messagesContainer");
+        
+        //Creating a new div every time 
         var messageElement = document.createElement("div");
         messageElement.className = "message";
 
+        //Adding a new p element every name
         var nameElement = document.createElement("p");
         nameElement.textContent = "Name: " + message.name;
 
+        //Creating a new p element for email
         var emailElement = document.createElement("p");
         emailElement.textContent = "Email: " + message.email;
 
         var messageContentElement = document.createElement("p");
         messageContentElement.textContent = "Message: " + message.message;
 
+        //Appending child so that it applied the messages to the element 
         messageElement.appendChild(nameElement);
         messageElement.appendChild(emailElement);
         messageElement.appendChild(messageContentElement);
 
+        //Appending to message div
         messagesContainer.appendChild(messageElement);
       }
 
@@ -135,16 +143,22 @@ window.onload = function () {
         var messagesContainer = document.getElementById("messagesContainer");
         messagesContainer.innerHTML = ""; // Clear existing content
 
+        //Getting messages from local storage or empty array
         var messages = JSON.parse(localStorage.getItem("messages")) || [];
 
+        //For each element, it displays a message by triggering the displayMessage() method in the admin html
         messages.forEach(function (message) {
           displayMessage(message);
         });
       }
 
-      //Listens for changes in localStorage and update accordingly
+      //Listens for changes in localStorage on the page and update accordingly
+      //That way as soon as there is a change to localStorage it will update the page 
       window.addEventListener("storage", function (event) {
+        
+        //Using the key "messages" to find the new message to add 
         if (event.key === "messages") {
+          //Triggering the update admin method 
           updateAdminPageFromStorage();
         }
       });

@@ -76,9 +76,10 @@ For “Internet Programming” Section (00001)– Fall 2023
         fonts();
       };
       function contact(event) {
+        
         event.preventDefault();
 
-        //Gets values at index 0 so that it's reusable
+        //Gets values at index 0 so that it's reusable and placing it in the top every time 
         var nameOfClient = document.getElementsByName("name")[0].value;
         var emailAddy = document.getElementsByName("email")[0].value;
         var messageToSend = document.getElementsByName("message")[0].value;
@@ -98,13 +99,16 @@ For “Internet Programming” Section (00001)– Fall 2023
         //Provides alert to the user
         alert("Your message has been submitted!");
 
-        // Update admin page using concept called localStorage
+        // Update admin page using concept localStorage to store messages or create empty array
         var messages = JSON.parse(localStorage.getItem("messages")) || [];
+        
+        //Pushing element
         messages.push({
           name: nameOfClient,
           email: emailAddy,
           message: messageToSend,
         });
+        
         //set's item as JSON string with the messages variable that was created above
         localStorage.setItem("messages", JSON.stringify(messages));
 
