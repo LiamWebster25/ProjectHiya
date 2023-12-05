@@ -44,6 +44,10 @@ Password: password
 
 (we aren't concerned about security at this point in time) 
 
+HOW TO USE:
+
+Open the project folder in Visual Studio Code. Open the "home.html" file. Right click anywhere on the file and select "Open with Live Server" (If it is not installed, install the Live Server extension). You can go through the various pages liste above.
+
 
 Project created by: 
 
@@ -55,4 +59,5 @@ REFERENCES:
 - karate.jpg: https://www.vecteezy.com/vector-art/6945733-simple-karate-logo-vector
 - Hiya.mov: Made by us.
 
+PROJECT VERSION: 1.0.0
  
